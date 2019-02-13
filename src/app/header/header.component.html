@@ -1,0 +1,33 @@
+<a href="#" class="d-block px-3 py-2 text-center text-bold text-white old-bv">
+    Welcome to the Learning Hub powered by 
+    <a href='https://legatohealthtech.com' target="_blank">Legato Health Technologies</a>.
+</a>
+<nav class="navbar navbar-expand-sm flex-column flex-md-row navbar-dark bg-primary sticky-top">
+  <a class="navbar-brand" href="#">
+    <!-- <img src="favicon.ico" width="30" height="30" class="d-inline-block align-top" alt=""> -->
+    <span class="nav-title"> Learn @ Legato</span>
+  </a>
+  <button class="navbar-toggler" (click)="collapse=!collapse" type="button" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="navbar-collapse" (click)="collapse=true" [hidden]="collapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fa fa-home mr-1"></i>Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fa fa-graduation-cap mr-1"></i>Courses</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fa fa-info-circle mr-1"></i>About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fa fa-comment mr-1"></i>Contact Us</a>
+      </li>
+    </ul>
+  </div>
+  <form class="form-inline md-form form-sm mt-0">
+    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
+    <i class="fa fa-search ml-2" aria-hidden="true"></i>
+  </form>
+</nav>
