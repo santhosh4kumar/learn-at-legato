@@ -28,5 +28,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 #convert to angular application
 >npm install
-#install bootstrap
->npm install bootstrap
+#install bootstrap and jquery
+>npm install --save bootstrap jquery
+#install font awesome for icon classes
+>npm install font-awesome --save
