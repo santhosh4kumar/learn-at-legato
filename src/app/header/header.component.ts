@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   collapse: boolean = true;
+  username: 'Niranjan';
   constructor() { }
 
   ngOnInit() {
