@@ -12,19 +12,8 @@ import { CartComponent } from './cart/cart.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
-
-const appRoutes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'courses', component:  HomeComponent},
-  { path: 'course/:id', component:  HomeComponent},
-  { path: 'about', component:  AboutComponent},
-  { path: 'contact', component:  ContactComponent},
-  { path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
-  },
-  { path: '**', component: PageNotFoundComponent }
-];
+import { AddFeedbackComponent } from './contact/add-feedback/add-feedback.component';
+import { ListFeedbackComponent } from './contact/list-feedback/list-feedback.component';
 
 @NgModule({
   declarations: [
@@ -36,12 +25,13 @@ const appRoutes: Routes = [
     PageNotFoundComponent,
     CartComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    AddFeedbackComponent,
+    ListFeedbackComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
