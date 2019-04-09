@@ -1,0 +1,25 @@
+{
+  "comments": [
+    {
+      "id": 101,
+      "username": "Niranjan",
+      "mobile": "9556824846",
+      "email": "niranjan@gmail.com",
+      "message": "Build Your First Full Stack Application with Angular and Spring Boot. Become a Full Stack Web Developer Now! You will Develop Your First FULL STACK Application with Angular and Spring Boot You will learn the Basics of Building AWESOME Frontend Applications with Angular You will be introduced to Building Great RESTful APIs with Spring Boot"
+    },
+    {
+      "id": 102,
+      "username": "Jeethu",
+      "mobile": "9337079036",
+      "email": "jeethu@gmail.com",
+      "message": "Build Your First Full Stack Application with Angular and Spring Boot. Become a Full Stack Web Developer Now! You will Develop Your First FULL STACK Application with Angular and Spring Boot You will learn the Basics of Building AWESOME Frontend Applications with Angular You will be introduced to Building Great RESTful APIs with Spring Boot"
+    },
+    {
+      "id": 103,
+      "username": "Ashish",
+      "email": "ashish@gmail.com",
+      "mobile": "9777706141",
+      "message": "Test Message Ashish"
+    }
+  ]
+}

@@ -2,46 +2,55 @@ body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 0.8rem !important;
-    background-color: #FAFAFA;
+    background-color: #ffffff;
+    background: rgba(1, 1, 1, 0.2) url(assets/images/2-bridge.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-.old-bv {
-    font-size: 14px;
-    background-color: #322348;
+// html {
+//     margin-bottom: 150px;
+// }
+
+main {
+    padding-top: 100px;
+    min-height: 89vh;
 }
 
-.old-bv:hover {
-    text-decoration: none;
-    background-color: #231832;
-}
-
-.nav-link {
-    color: rgba(255, 255, 255, .75);
-}
-
-.nav-link:hover {
-    color: #ffffff !important;
-}
-
-.bd-navbar {
-    background-color: #563d7c;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .05), inset 0 -1px 0 rgba(0, 0, 0, .1);
-}
-
-.btn-learn {
-    background-color: #563d7c !important;
-    border-radius: 0px !important;
-    border-color: #322348 !important;
-}
-
-.btn-learn:hover {
-    background-color: #322348 !important;
-}
-
-.no-box-shadow , .no-box-shadow:focus {
+.no-box-shadow,
+.no-box-shadow:focus {
     box-shadow: none !important;
 }
 
-.margin-0 {
-    margin: 0px !important;
+/* start of mousehover text popup */
+
+.showtip {
+    position: relative;
 }
+.tooltiptext {
+    z-index: 99999;
+    position: absolute;
+    color: #F78080;
+    background: #4D4D4D;
+    padding: 5px 8px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    max-width: 200px;
+    opacity: 0;
+    pointer-events: none;
+    right: 0;
+    top: 2px;
+    border-radius: 4px;
+    transform: translate3d(-50%, 0%, 0);
+    transition: all .3s ease;
+    transition-delay: 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 2px 10px;
+    text-align: center;
+}
+.showtip:hover .tooltiptext {
+    opacity: 1;
+}
+
+/* end of mousehover text popup */

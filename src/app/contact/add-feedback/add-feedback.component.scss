@@ -20,6 +20,17 @@
 }
 
 .message {
-    height: 135px;
+    height: 145px;
     resize: none;
+}
+
+input[type=text], textarea {
+    box-shadow: none !important;
+}
+input[type=text] {
+    box-shadow: none !important;
+}
+
+.error-icons {
+    padding: 8px 0px 0px 5px;
 }

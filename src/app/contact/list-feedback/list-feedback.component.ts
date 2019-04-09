@@ -1,3 +1,5 @@
+import { Feedback } from './../../model/feedback.model';
+import { FeedbackService } from './../../services/feedback.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-feedback.component.scss']
 })
 export class ListFeedbackComponent implements OnInit {
-
-  constructor() { }
+  comments: Feedback[] = [];
+  constructor(private _feedbackService: FeedbackService) { }
 
   ngOnInit() {
+    this._feedbackService.getFeedbacks().subscribe(data => {
+      this.comments = data;
+    }, error => {
+      // this._httpClientService.handleError(error);
+    });
   }
 
 }

@@ -1,5 +1,8 @@
+import { RegisterComponent } from './register/register.component';
+import { AuthGuard } from './guards/auth.guard';
+import { CoursesComponent } from './courses/courses.component';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, CanActivate } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -12,10 +15,26 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'courses', component:  HomeComponent},
-  { path: 'course/:id', component:  HomeComponent},
+  { 
+    path: 'courses', 
+    component:  CoursesComponent, 
+    canActivate: [AuthGuard]
+  },
+  { 
+    path: 'course/:id', 
+    component:  CoursesComponent, 
+    canActivate: [AuthGuard]
+  },
   { path: 'about', component:  AboutComponent},
   { path: 'contact', component:  ContactComponent},
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
   { path: '',
     redirectTo: '/home',
     pathMatch: 'full'

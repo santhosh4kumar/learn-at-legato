@@ -5,58 +5,26 @@
   </div>
 </div>
 
-<div class="row mt-2">
-  <div class="col-sm-12 col-lg-12">
-    <p class="text-danger margin-0">1. Niranjan Maharana</p>
-    <div class="ml-3 text-info">
-      <p class="col-sm-12 col-xs-12 margin-0">Test Comment</p>
-      <div class="container">
-        <div class="row text-inactive">
-          <span class="col-lg-12"><i class="fa fa-phone"></i> : +91-9556824846</span>
-          <span class="col-lg-12"><i class="fa fa-envelope"></i> : <a href="mailto:niranjanmaharna95@gmail.com">niranjanmaharna95@gmail.com</a></span>
-        </div>
+<div class="row feedback-container" *ngFor="let comment of comments; let i = index" [attr.data-index]="i">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12">
+        <p class="text-danger margin-0">{{i+1}}. {{comment.username}}</p>
       </div>
     </div>
-  </div>
-</div>
-<div class="row mt-2">
-  <div class="col-sm-12 col-lg-12">
-    <p class="text-danger">2. Santosh Kumar</p>
-    <div class="ml-3 text-info">
-      <p class="col-sm-12 col-xs-12">Test Comment 2</p>
-      <div class="container">
-        <div class="row">
-          <span class="col-lg-12"><i class="fa fa-phone"></i> : +91-9556824846</span>
-          <span class="col-lg-12"><i class="fa fa-envelope"></i> : <a href="mailto:niranjanmaharna95@gmail.com">niranjanmaharna95@gmail.com</a></span>
-        </div>
+    <div class="row">
+      <div class="col-sm-12 col-lg-12">
+        <p class="col-sm-12 col-xs-12">{{comment.message}}</p>
       </div>
     </div>
-  </div>
-</div>
-<div class="row mt-2">
-  <div class="col-sm-12 col-lg-12">
-    <p class="text-danger">3. Sreelatha Mavilla</p>
-    <div class="ml-3 text-info">
-      <p class="col-sm-12 col-xs-12">Test Comment 3</p>
-      <div class="container">
-        <div class="row">
-          <span class="col-lg-12"><i class="fa fa-phone"></i> : +91-9556824846</span>
-          <span class="col-lg-12"><i class="fa fa-envelope"></i> : <a href="mailto:niranjanmaharna95@gmail.com">niranjanmaharna95@gmail.com</a></span>
-        </div>
+    <div class="row">
+      <div class="col-lg-12 col-sm-12 col-xs-12 ml-3 text-info">
+        <span><i class="fa fa-phone"></i> : {{comment.mobile}}</span>
       </div>
     </div>
-  </div>
-</div>
-<div class="row mt-2">
-  <div class="col-sm-12 col-lg-12">
-    <p class="text-danger">4. Smruti Ranjan Mishra</p>
-    <div class="ml-3 text-info">
-      <p class="col-sm-12 col-xs-12">Test Comment 4</p>
-      <div class="container">
-        <div class="row">
-          <span class="col-lg-12"><i class="fa fa-phone"></i> : +91-9556824846</span>
-          <span class="col-lg-12"><i class="fa fa-envelope"></i> : <a href="mailto:niranjanmaharna95@gmail.com">niranjanmaharna95@gmail.com</a></span>
-        </div>
+    <div class="row">
+      <div class="col-lg-12 col-sm-12 col-xs-12 ml-3 text-info">
+        <span><i class="fa fa-envelope"></i> : <a href="mailto:{{comment.email}}">{{comment.email}}</a></span>
       </div>
     </div>
   </div>

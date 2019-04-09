@@ -1,7 +1,8 @@
 
 export class Feedback {
-    feedbackId: number;
+    id: number;
     username: string;
-    mobile: number;
+    mobile: string;
     email: string;
+    message: string;
 }
