@@ -9,17 +9,14 @@ import { delay, mergeMap, materialize, dematerialize } from 'rxjs/operators';
 export class FakeBackendInterceptor implements HttpInterceptor {
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<any> {
         const users: User[] = [
-            { id: 1, username: 'test', password: 'test', firstName: 'Test', lastName: 'User' }
+            { id: 1, username: 'admin', password: 'admin', firstName: 'System', lastName: 'Administrator' },
+            { id: 2, username: 'niranjan', password: 'niranjan', firstName: 'Niranjan', lastName: 'Maharana' }
         ];
-
-        console.log('FakeBackendInterceptor');
 
         const authHeader = request.headers.get('Authorization');
         const isLoggedIn = authHeader && authHeader.startsWith('Bearer fake-jwt-token');
         // wrap in delayed observable to simulate server api call
         return of(null).pipe(mergeMap(() => {
-
-            console.log(request.url.endsWith('/users/authenticate'));
             // authenticate - public
             if (request.url.endsWith('/users/authenticate') && request.method === 'POST') {
                 const user = users.find(x => x.username === request.body.username && x.password === request.body.password);

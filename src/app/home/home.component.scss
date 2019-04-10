@@ -42,16 +42,26 @@
     transition: width 0.4s linear;
 }
 
+.search_input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: whitesmoke;
+    opacity: 1; /* Firefox */
+  }
+
+  
 .searchbar:hover>.search_input {
     padding: 0 10px;
     width: 400px;
-    caret-color: #262626;
+    caret-color: whitesmoke;
     transition: width 0.4s linear;
 }
 
 .searchbar:hover>.search_icon {
     background: white;
     color: #262626;
+}
+
+.searchbar:hover>.search_icon i{
+    color: black;
 }
 
 .search_icon {
@@ -63,4 +73,8 @@
     align-items: center;
     border-radius: 50%;
     color: white;
+}
+
+.search_icon i{
+    color:whitesmoke;
 }
